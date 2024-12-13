@@ -1,9 +1,43 @@
 package rectangles
 
+import "fmt"
+
 // Erwartet zwei Seitenlängen `height` und `width`.
 // Zeichnet ein Rechteck mit diesen Seitenlängen auf der Konsole.
 // Die Zeichen für Rand und Füllung des Rechtecks werden als Parameter erwartet.
+
+// func drawHorizontalLineflex(length int, character string) {
+
+// 	for i := 0; i < length-1; i++ { //iterieren
+// 		fmt.Print(character)
+// 	}
+
+// 	fmt.Println((character)) //nach letztem character umbruch reinhauen
+// }
+
+func drawVerticalLinesflex(height int, width int, inner, outer string) {
+
+	for i := 0; i < height-2; i++ { //durch rows iterieren
+
+		fmt.Print(outer)
+
+		for j := 0; j < width-2; j++ {
+
+			fmt.Print(inner)
+
+		}
+		fmt.Println(outer)
+
+	}
+
+}
+
 func DrawRectangle(height, width int, inner, outer string) {
+
+	drawHorizontalLine(width, outer)
+	drawVerticalLinesflex(height, width, inner, outer)
+	drawHorizontalLine(width, outer)
+
 	// TODO
 }
 

@@ -4,5 +4,11 @@ package rectangles
 // Zeichnet ein Quadrat mit dieser Seitenlänge auf der Konsole.
 // Das Quadrat soll komplett mit `#`-Zeichen gefüllt sein.
 func DrawSolidSquare(length int) {
-	// TODO
+
+	for i := 0; i < length; i++ {
+
+		drawHorizontalLine(length, "#")
+
+	}
+
 }
