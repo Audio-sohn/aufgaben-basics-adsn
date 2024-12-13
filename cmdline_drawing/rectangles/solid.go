@@ -5,8 +5,8 @@ package rectangles
 // Das Rechteck soll komplett mit `#`-Zeichen gefüllt sein.
 func DrawSolidRectangle(height, width int) {
 
-	drawHorizontalLine(width, "#")
-	drawVerticalLinesflex(height, width, "#", "#")
-	drawHorizontalLine(width, "#")
+	DrawHorizontalLine(width, "#")
+	DrawVerticalLinesflex(height, width, "#", "#")
+	DrawHorizontalLine(width, "#")
 
 }

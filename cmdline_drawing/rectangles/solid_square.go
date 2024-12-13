@@ -7,7 +7,7 @@ func DrawSolidSquare(length int) {
 
 	for i := 0; i < length; i++ {
 
-		drawHorizontalLine(length, "#")
+		DrawHorizontalLine(length, "#")
 
 	}
 

@@ -2,7 +2,7 @@ package rectangles
 
 import "fmt"
 
-func drawHorizontalLine(length int, character string) {
+func DrawHorizontalLine(length int, character string) {
 
 	for i := 0; i < length-1; i++ { //iterieren
 		fmt.Print(character)
@@ -33,11 +33,11 @@ func drawVerticalLines(height int, width int, character string) {
 // Der Rand des Rechtecks soll aus `#`-Zeichen bestehen, der Innenraum soll leer sein.
 func DrawEmptyRectangle(height, width int) {
 
-	drawHorizontalLine(width, "#")
+	DrawHorizontalLine(width, "#")
 
 	drawVerticalLines(height, width, "#")
 
-	drawHorizontalLine(width, "#")
+	DrawHorizontalLine(width, "#")
 
 }
 

@@ -1,5 +1,18 @@
 package triangles
 
+import (
+	"aufgaben-basics/cmdline_drawing/rectangles"
+	"fmt"
+)
+
+func drawVerticalLinesTriang () {
+
+	
+
+
+}
+
+
 // Erwartet eine Seitenlänge `length`.
 // Zeichnet ein gleichschenkliges, rechtwinkliges Dreieck mit diesen Seitenlängen auf der Konsole.
 // Das Dreieck soll komplett mit `#`-Zeichen gefüllt sein.
@@ -7,7 +20,41 @@ package triangles
 // vertikal bzw. horizontal verlaufen.
 // Der Rand des Dreiecks soll aus `#`-Zeichen bestehen, der Innenraum soll leer sein.
 func DrawEmptyTriangle(length int) {
-	// TODO
+
+	character := "#"
+
+	for i := 1; i < length; i++ {
+	
+		
+
+		switch(i) {
+			
+		default:
+	
+
+
+		}
+
+		if i == length-1 {
+
+			rectangles.DrawHorizontalLine(length, character)
+		} else {
+
+			rectangles.
+		}
+
+
+
+
+
+	}
+		
+	
+
+
+
+	}
+
 }
 
 // REMARKS

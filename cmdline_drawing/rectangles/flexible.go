@@ -15,7 +15,7 @@ import "fmt"
 // 	fmt.Println((character)) //nach letztem character umbruch reinhauen
 // }
 
-func drawVerticalLinesflex(height int, width int, inner, outer string) {
+func DrawVerticalLinesflex(height int, width int, inner, outer string) {
 
 	for i := 0; i < height-2; i++ { //durch rows iterieren
 
@@ -34,9 +34,9 @@ func drawVerticalLinesflex(height int, width int, inner, outer string) {
 
 func DrawRectangle(height, width int, inner, outer string) {
 
-	drawHorizontalLine(width, outer)
-	drawVerticalLinesflex(height, width, inner, outer)
-	drawHorizontalLine(width, outer)
+	DrawHorizontalLine(width, outer)
+	DrawVerticalLinesflex(height, width, inner, outer)
+	DrawHorizontalLine(width, outer)
 
 	// TODO
 }
