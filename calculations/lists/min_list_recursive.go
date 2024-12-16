@@ -5,7 +5,26 @@ package lists
 // ZUSATZBEDINGUNG: Diese Funktion darf keine Schleife verwenden.
 func MinListRecursive(nums []int) int {
 
-	return 0
+	if len(nums) == 0 { // error catchen bei leerer liste
+		return 0
+
+	} else if len(nums) == 1 { // wenn liste nur 1 lang offensichtliches ergebnis ausgeben
+
+		return nums[0]
+
+	} else {
+
+		//letztes element und vorletztes vergleichen, wenn vorletztes kleiner,
+		//dann kleineres nach vorne kopieren
+		if nums[len(nums)-1] < nums[len(nums)-2] {
+
+			nums[len(nums)-2] = nums[len(nums)-1]
+
+		}
+		//und letzten eintrag verwerfen, dann die rekursion weiter führen
+		return MinListRecursive(nums[:len(nums)-1])
+
+	}
 }
 
 // REMARKS
