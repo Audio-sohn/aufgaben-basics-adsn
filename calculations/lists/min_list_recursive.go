@@ -12,19 +12,17 @@ func MinListRecursive(nums []int) int {
 
 		return nums[0]
 
-	} else {
+	}
+	//letztes element und vorletztes vergleichen, wenn vorletztes kleiner,
+	//dann kleineres nach vorne kopieren
+	if nums[len(nums)-1] < nums[len(nums)-2] {
 
-		//letztes element und vorletztes vergleichen, wenn vorletztes kleiner,
-		//dann kleineres nach vorne kopieren
-		if nums[len(nums)-1] < nums[len(nums)-2] {
-
-			nums[len(nums)-2] = nums[len(nums)-1]
-
-		}
-		//und letzten eintrag verwerfen, dann die rekursion weiter führen
-		return MinListRecursive(nums[:len(nums)-1])
+		nums[len(nums)-2] = nums[len(nums)-1]
 
 	}
+	//und letzten eintrag verwerfen, dann die rekursion weiter führen
+	return MinListRecursive(nums[:len(nums)-1])
+
 }
 
 // REMARKS

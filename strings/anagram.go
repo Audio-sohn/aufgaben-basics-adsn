@@ -4,7 +4,11 @@ package strings
 // Ein Anagramm von s1 ist ein String, der exakt die gleichen Buchstaben wie s1
 // enthält, aber nicht unbedingt in der gleichen Reihenfolge.
 func IsAnagram(s1, s2 string) bool {
-	// TODO
+
+	if len(s1) != len(s2) { // error catchen, wenn unterschiedlich lang, dann kein anagramm!
+		return false
+	}
+
 	return false
 }
 

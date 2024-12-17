@@ -1,17 +1,26 @@
 package triangles
 
 import (
-	"aufgaben-basics/cmdline_drawing/rectangles"
 	"fmt"
 )
 
-func drawVerticalLinesTriang () {
+func DrawVerticalLineflex(width int, inner, outer string) {
 
-	
+	for i := 0; i < width; i++ { //durch rows iterieren
 
+		if i == 0 || i == width-1 {
+
+			fmt.Print(outer) //wenn am rand, outer char printen
+
+		} else {
+
+			fmt.Print(inner) //wenn nicht am rand, dann inner char printen
+
+		}
+	}
+	fmt.Println("") //line abschließen
 
 }
-
 
 // Erwartet eine Seitenlänge `length`.
 // Zeichnet ein gleichschenkliges, rechtwinkliges Dreieck mit diesen Seitenlängen auf der Konsole.
@@ -21,40 +30,20 @@ func drawVerticalLinesTriang () {
 // Der Rand des Dreiecks soll aus `#`-Zeichen bestehen, der Innenraum soll leer sein.
 func DrawEmptyTriangle(length int) {
 
-	character := "#"
+	outer := "#"
+	inner := " "
 
-	for i := 1; i < length; i++ {
-	
-		
+	for i := 1; i <= length; i++ {
 
-		switch(i) {
-			
-		default:
-	
+		if i == length {
 
+			DrawVerticalLineflex(i, outer, outer)
 
-		}
-
-		if i == length-1 {
-
-			rectangles.DrawHorizontalLine(length, character)
 		} else {
-
-			rectangles.
+			DrawVerticalLineflex(i, inner, outer)
 		}
 
-
-
-
-
 	}
-		
-	
-
-
-
-	}
-
 }
 
 // REMARKS

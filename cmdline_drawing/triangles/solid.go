@@ -6,5 +6,18 @@ package triangles
 // Der rechte Winkel soll links unten liegen und die Seiten sollen
 // vertikal bzw. horizontal verlaufen.
 func DrawSolidTriangle(length int) {
-	// TODO
+
+	inner, outer := "#", "#"
+
+	for i := 1; i <= length; i++ {
+
+		if i == length {
+
+			DrawVerticalLineflex(i, outer, outer)
+
+		} else {
+			DrawVerticalLineflex(i, inner, outer)
+		}
+
+	}
 }
