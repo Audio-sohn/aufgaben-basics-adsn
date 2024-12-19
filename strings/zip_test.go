@@ -9,6 +9,7 @@ func ExampleZip() {
 	// Output:
 	// ABABAB
 	// ACBDACBDCADB
+
 }
 
 func ExampleZip_different_length() {
