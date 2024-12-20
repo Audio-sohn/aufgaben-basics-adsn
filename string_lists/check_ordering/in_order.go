@@ -11,19 +11,22 @@ func CheckOrdering(strings []string, first, second string) bool {
 
 	for _, char := range strings { // schleife
 
-		if char == first && secondFound { //wenn zweites NACH dem ersten gefunden, dann false returnen
+		//wenn zweites NACH dem ersten gefunden, dann false returnen
+		if char == first && secondFound {
 
 			return false
 
 		}
 
-		if char == first && !firstFound { // wenn string erstmals gefunden, dann flag setzen
+		// wenn string erstmals gefunden, dann flag setzen
+		if char == first && !firstFound {
 
 			firstFound = true
 
 		}
 
-		if char == second && !secondFound { // wenn string erstmals gefunden, dann flag setzen
+		// wenn string erstmals gefunden, dann flag setzen
+		if char == second && !secondFound {
 
 			secondFound = true
 
@@ -31,7 +34,8 @@ func CheckOrdering(strings []string, first, second string) bool {
 
 	}
 
-	return firstFound && secondFound //wenn alles i.O. und beide strings vorhanden, true retzrnen
+	//wenn alles i.O. und beide strings vorhanden, true returnen
+	return firstFound && secondFound
 }
 
 // REMARKS
