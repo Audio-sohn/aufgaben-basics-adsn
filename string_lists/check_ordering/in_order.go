@@ -5,37 +5,28 @@ package check_ordering
 // Gibt `true` zurück, wenn das der Fall ist, ansonsten `false`.
 func CheckOrdering(strings []string, first, second string) bool {
 
-	//durch string iterieren, checken welcher char zuerst gefunden wurden
-	firstFound := false // flags für stringentdeckung
-	secondFound := false
+	ifirst := 0
+	isecond := 0
 
-	for _, char := range strings { // schleife
+	//error sofort catchen und abbrechen
+	if len(strings) == 0 {
 
-		//wenn zweites NACH dem ersten gefunden, dann false returnen
-		if char == first && secondFound {
-
-			return false
-
-		}
-
-		// wenn string erstmals gefunden, dann flag setzen
-		if char == first && !firstFound {
-
-			firstFound = true
-
-		}
-
-		// wenn string erstmals gefunden, dann flag setzen
-		if char == second && !secondFound {
-
-			secondFound = true
-
-		}
+		return false
 
 	}
 
-	//wenn alles i.O. und beide strings vorhanden, true returnen
-	return firstFound && secondFound
+	// i ist der zähler, speci der respektive wert an der stelle i im array "strings"
+	// so wird durchiteriert ohne dass du manuell nochmal conditions setzen musst
+	for i, speci := range strings {
+		if speci == first {
+			ifirst = i
+		}
+		if speci == second {
+			isecond = i
+		}
+	}
+
+	return ifirst != 0 && isecond != 0 && ifirst < isecond
 }
 
 // REMARKS
